@@ -3,11 +3,11 @@ last_turn = {}
 for i in range(len(inp)):
     last_turn[inp[i]] = i+1
 
-def solve():
+def solve(TURN):
     current = 0
     current_turn = len(inp)+1
     while True:
-        if current_turn == 30000000:
+        if current_turn == TURN:
             print(current)
             return
         if current not in last_turn.keys():
