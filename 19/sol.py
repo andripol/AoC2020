@@ -14,12 +14,7 @@ def obey_rules_rec(word, rule):
             return "False"
         if type(rule[0]) == str:
             if word[0] == rule[0]:
-                if len(word) > 1 and len(rule[0]) > 1:
-                    return obey_rules_rec(word[1:], [rule[1:]])
-                elif len(word) > 1:
-                    return word[1:]
-                else:
-                    return ""
+                return word[1:]
             else:
                 return "False"
         else:
